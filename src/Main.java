@@ -12,6 +12,7 @@ public class Main{
         //Pour le deroulement
         Scanner sc = new Scanner(System.in);
         String choix;
+        int choiX;
 
         //Creation des objets
         SystemeSolaire systemeSolaire = new SystemeSolaire();
@@ -56,7 +57,6 @@ public class Main{
                     planeteActuelle.explorer(vaisseau, planetesVisités, planeteActuelle);
                     planeteActuelle.explorerObjet(vaisseau);
 
-
                     //Affichage
                     System.out.println();
                     System.out.println("Vous explorez la planète " + planeteActuelle + "\n" +
@@ -66,6 +66,15 @@ public class Main{
                     break;
 
                 case "3" :
+                    for(int i = 0; i < vaisseau.getInventaire().size(); i++) {
+                        System.out.println(i + " .  " + vaisseau.getInventaire().get(i));
+                    }
+                    System.out.println("Quelle objet voulez-vous utiliser : ");
+                        choiX = sc.nextInt();
+                        vaisseau.getInventaire().get(choiX).utiliser(vaisseau);
+                        vaisseau.getInventaire().remove(choiX);
+
+
 
 
                     break;

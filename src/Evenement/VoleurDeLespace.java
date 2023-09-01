@@ -12,6 +12,6 @@ public class VoleurDeLespace implements Evenement{
 
     @Override
     public String toString() {
-        return "Des voleurs vous volent 100L de carburant";
+        return "Des voleurs accostent votre vaisseau\nVotre vaisseau perd 100L de carburant";
     }
 }

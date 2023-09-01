@@ -61,9 +61,8 @@ public class Main{
                     System.out.println();
                     System.out.println("Vous explorez la planète " + planeteActuelle + "\n" +
                             "Vous dépensez " + vaisseau.getDernierVoyageCarburant() + " litres d’essence.\n" +
-                            "Des pirates de l’espace vous attaquent !\n" +
-                            "Votre vaisseau perd 40 points de vie !\n" +
-                            "Vous obtenez un " + vaisseau." !");
+                                    planeteActuelle.evenementAleatoire(vaisseau) +
+                            "\nVous obtenez un(e) " + planeteActuelle.explorerObjet(vaisseau) + " !");
                     break;
 
                 case "3" :

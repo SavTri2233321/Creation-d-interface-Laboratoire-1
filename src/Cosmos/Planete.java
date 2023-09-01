@@ -1,7 +1,9 @@
 package Cosmos;
 
+import Evenement.Evenement;
 import Objet.Equipement;
 import Objet.ListeDequipement;
+import Evenement.ListeDevenement;
 import Vaisseau.Vaisseau;
 
 import java.util.Stack;
@@ -13,6 +15,8 @@ public class Planete {
     protected int distanceDuSoleil;
 
     protected Equipement[] inventaire = new ListeDequipement().getListeDequipement();
+
+    protected Evenement[] evenement = new ListeDevenement().getListeDequipement();
     String gravité;
 
     //constructeur
@@ -33,15 +37,21 @@ public class Planete {
 
     }
 
-    public void explorerObjet(Vaisseau vaisseau){
-        int nombre = (int) (Math.random()*3);
+    public Equipement explorerObjet(Vaisseau vaisseau){
 
         //Premier Objet
-        vaisseau.setInventaire(inventaire[(int) (Math.random()*4)]);
+        Equipement equipement = inventaire[(int) (Math.random()*4)];
+        vaisseau.setInventaire(equipement);
 
-        //Deuxieme Objet 1/3
-        if (nombre == 1)
-            vaisseau.setInventaire(inventaire[(int) (Math.random()*4)]);
+        return equipement;
 
+    }
+
+    public Evenement evenementAleatoire(Vaisseau vaisseau) {
+
+        Evenement evenement = this.evenement[(int) (Math.random()*2)];
+        evenement.actionner(vaisseau);
+
+        return evenement;
     }
 }

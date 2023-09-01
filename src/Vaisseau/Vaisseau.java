@@ -2,6 +2,7 @@ package Vaisseau;
 
 import Cosmos.Planete;
 import Cosmos.SystemeSolaire;
+import Objet.Equipement;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -17,7 +18,7 @@ public class Vaisseau {
     private final int vieMax = 100;
 
     private final int carburantMax = 1000;
-    private final ArrayList<Objects> inventaire = new ArrayList<>();
+    private ArrayList<Equipement> inventaire = new ArrayList<>();
 
     public Vaisseau() {
         this.nivDeCarburant = 1000;
@@ -38,7 +39,7 @@ public class Vaisseau {
         this.nivDeCarburant = nouveauNiv;
     }
 
-    public ArrayList<Objects> getInventaire() {
+    public ArrayList<Equipement> getInventaire() {
         return inventaire;
     }
 
@@ -56,5 +57,9 @@ public class Vaisseau {
 
     public int getCarburantMax() {
         return carburantMax;
+    }
+
+    public void setInventaire(Equipement equipement) {
+        inventaire.add(equipement);
     }
 }

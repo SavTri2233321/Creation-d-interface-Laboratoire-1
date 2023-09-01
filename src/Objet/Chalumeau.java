@@ -2,7 +2,7 @@ package Objet;
 
 import Vaisseau.Vaisseau;
 
-public class Chalumeau implements Objet{
+public class Chalumeau implements Equipement{
 
     @Override
     public void utiliser(Vaisseau vaisseau){

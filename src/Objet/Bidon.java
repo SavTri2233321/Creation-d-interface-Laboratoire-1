@@ -2,7 +2,7 @@ package Objet;
 
 import Vaisseau.Vaisseau;
 
-public class Bidon implements Objet{
+public class Bidon implements Equipement{
 
     @Override
     public void utiliser(Vaisseau vaisseau){

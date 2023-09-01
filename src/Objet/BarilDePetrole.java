@@ -1,7 +1,7 @@
 package Objet;
 import Vaisseau.Vaisseau;
 
-public class BarilDePetrole implements Objet {
+public class BarilDePetrole implements Equipement {
 
     public void utiliser(Vaisseau vaisseau){
         if (vaisseau.getNivDeCarburant() <= 500 )

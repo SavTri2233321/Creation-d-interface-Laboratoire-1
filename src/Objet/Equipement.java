@@ -2,7 +2,7 @@ package Objet;
 
 import Vaisseau.Vaisseau;
 
-public interface Objet {
+public interface Equipement {
 
     public void utiliser(Vaisseau vaisseau);
 

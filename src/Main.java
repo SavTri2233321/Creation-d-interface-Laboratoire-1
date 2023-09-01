@@ -54,6 +54,7 @@ public class Main{
                     planetesVisités.push(planeteActuelle);
                     planeteActuelle = prochainÉtineraire(systemeSolaire, planetesVisités);
                     planeteActuelle.explorer(vaisseau, planetesVisités, planeteActuelle);
+                    planeteActuelle.explorerObjet(vaisseau);
 
 
                     //Affichage
@@ -62,7 +63,7 @@ public class Main{
                             "Vous dépensez " + vaisseau.getDernierVoyageCarburant() + " litres d’essence.\n" +
                             "Des pirates de l’espace vous attaquent !\n" +
                             "Votre vaisseau perd 40 points de vie !\n" +
-                            "Vous obtenez un moteur au plasma !");
+                            "Vous obtenez un " + vaisseau." !");
                     break;
 
                 case "3" :
